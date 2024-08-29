@@ -18,7 +18,6 @@ public class ForecastFragment extends Fragment {
     public ForecastFragment() {
         // Required empty public constructor
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +44,7 @@ public class ForecastFragment extends Fragment {
 
         linearLayout.addView(textView, textParams);
         ImageView imageView = new ImageView(getContext());
-        imageView.setImageResource(R.drawable.storm);
+        imageView.setImageResource(R.drawable.cloudy);
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
