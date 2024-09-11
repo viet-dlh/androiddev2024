@@ -12,5 +12,5 @@ Student Info
 
 * Name: *Do Le Hoang Viet*
 * ID: *22BI13463*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Group ID: *9*
+* Project Name: *Flight info*
