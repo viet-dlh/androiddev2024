@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#8ab4f8"
     android:orientation="vertical"
     tools:context=".ForecastFragment">
 
@@ -14,7 +15,6 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv1"
             android:layout_width="match_parent"
@@ -25,7 +25,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv1"
             android:layout_width="match_parent"
@@ -34,7 +33,6 @@
             android:layout_weight="1"
             android:contentDescription="Sunny"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv2"
             android:layout_width="match_parent"
@@ -45,14 +43,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv3"
             android:layout_width="match_parent"
@@ -64,7 +60,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             tools:ignore="RtlCompat" />
-
         <ImageView
             android:id="@+id/iv2"
             android:layout_width="match_parent"
@@ -73,7 +68,6 @@
             android:layout_weight="1"
             android:contentDescription="Heavy rain"
             android:src="@drawable/rainny" />
-
         <TextView
             android:id="@+id/tv4"
             android:layout_width="match_parent"
@@ -84,14 +78,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv5"
             android:layout_width="match_parent"
@@ -102,7 +94,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv3"
             android:layout_width="match_parent"
@@ -111,7 +102,6 @@
             android:layout_weight="1"
             android:contentDescription="Sunny"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv6"
             android:layout_width="match_parent"
@@ -122,7 +112,6 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -136,7 +125,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Thu"
+            android:text="@string/thursday"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -144,12 +133,11 @@
         <ImageView
             android:id="@+id/iv4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="16dp"
             android:layout_marginEnd="48dp"
             android:layout_weight="1"
             android:contentDescription="Cloudy"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv8"
             android:layout_width="match_parent"
@@ -160,14 +148,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv9"
             android:layout_width="match_parent"
@@ -182,31 +168,27 @@
         <ImageView
             android:id="@+id/iv5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="14dp"
             android:layout_marginEnd="48dp"
             android:layout_weight="1"
             android:contentDescription="Lightly rain"
             android:src="@drawable/rainny" />
-
         <TextView
             android:id="@+id/tv10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_weight="1"
             android:text="Cloudy"
             android:textColor="#3A3939"
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv11"
             android:layout_width="match_parent"
@@ -217,7 +199,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv6"
             android:layout_width="match_parent"
@@ -226,7 +207,6 @@
             android:layout_weight="1"
             android:contentDescription="Sunny"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv12"
             android:layout_width="match_parent"
@@ -237,14 +217,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv13"
             android:layout_width="match_parent"
@@ -255,7 +233,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv7"
             android:layout_width="match_parent"
@@ -264,7 +241,6 @@
             android:layout_weight="1"
             android:contentDescription="Rainny"
             android:src="@drawable/rainny" />
-
         <TextView
             android:id="@+id/tv14"
             android:layout_width="match_parent"
@@ -275,14 +251,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv15"
             android:layout_width="match_parent"
@@ -293,7 +267,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv8"
             android:layout_width="match_parent"
@@ -302,7 +275,6 @@
             android:layout_weight="1"
             android:contentDescription="Sunny"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv16"
             android:layout_width="match_parent"
@@ -313,14 +285,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv17"
             android:layout_width="match_parent"
@@ -331,7 +301,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv9"
             android:layout_width="match_parent"
@@ -340,7 +309,6 @@
             android:layout_weight="1"
             android:contentDescription="Cloudy"
             android:src="@drawable/cloudy" />
-
         <TextView
             android:id="@+id/tv18"
             android:layout_width="match_parent"
@@ -351,14 +319,12 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="64dp"
         tools:ignore="UselessParent">
-
         <TextView
             android:id="@+id/tv19"
             android:layout_width="match_parent"
@@ -369,7 +335,6 @@
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
-
         <ImageView
             android:id="@+id/iv10"
             android:layout_width="match_parent"
@@ -378,7 +343,6 @@
             android:layout_weight="1"
             android:contentDescription="Rainny"
             android:src="@drawable/rainny" />
-
         <TextView
             android:id="@+id/tv20"
             android:layout_width="match_parent"
@@ -389,5 +353,4 @@
             android:textSize="16sp"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
-
 </LinearLayout>

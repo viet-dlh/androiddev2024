@@ -2,27 +2,28 @@ package vn.edu.usth.weather;
 
 import android.os.Bundle;
 import android.util.Log;
-import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
+
+
 public class WeatherActivity extends AppCompatActivity {
     public static final String TAG = "Weather";
+    private ViewPager2 viewpager2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(R.layout.activity_weather);
+        viewpager2 = findViewById(R.id.vp1);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPagerAdapter.addFragment(new WeatherAndForecastFragment(),"Paris");
+        viewPagerAdapter.addFragment(new WeatherAndForecastFragment(),"Tokyo");
+        viewPagerAdapter.addFragment(new WeatherAndForecastFragment(),"London");
+        viewpager2.setAdapter(viewPagerAdapter);
+
         Log.i(TAG, "ON_CREATE");
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragmentContainerView,ForecastFragment.class,null)
-                .commit();
+        Log.i(TAG, "ON_CREATE");
     }
 
     @Override
