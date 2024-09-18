@@ -84,13 +84,14 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Wed"
+            android:text="@string/wednesday"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -154,13 +155,14 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Fri"
+            android:text="@string/fri"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -189,13 +191,14 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Sat"
+            android:text="@string/sat"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -223,13 +226,14 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Sun"
+            android:text="@string/sun"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -291,13 +295,14 @@
         android:orientation="horizontal"
         android:paddingBottom="30dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv17"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Tue"
+            android:text="@string/tue"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -325,13 +330,14 @@
         android:orientation="horizontal"
         android:paddingBottom="64dp"
         tools:ignore="UselessParent">
+
         <TextView
             android:id="@+id/tv19"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Wed"
+            android:text="@string/wednesday"
             android:textColor="#3A3939"
             android:textSize="16sp"
             android:textStyle="bold" />

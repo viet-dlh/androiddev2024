@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">USTH Weather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tue">Tue</string>
+    <string name="thursday">Thursday</string>
+    <string name="mon">Mon</string>
+    <string name="icon_weather">Icon Weather</string>
+    <string name="partly_cloudy">Partly Cloudy\n24C - 31C</string>
+    <string name="cloudy">12C\nCloudy</string>
+    <string name="sunny">Sunny</string>
+    <string name="storm">Tornado\n20C - 24C</string>
+    <string name="snowy">Snowy\n-4C - 1C</string>
+    <string name="rain">Showers\n26C - 27C</string>
+    <string name="moon">Moon\n26C - 29C</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="sat">Staturday</string>
+    <string name="sun">Sunday</string>
+    <string name="fri">Friday</string>
+</resources>
