@@ -5,9 +5,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.Menu;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
@@ -28,6 +30,9 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Weather App");
         viewpager2 = findViewById(R.id.vp1);
         tabLayout = findViewById(R.id.tabLayout);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
@@ -41,6 +46,12 @@ public class WeatherActivity extends AppCompatActivity {
         }).attach();
         Log.i(TAG, "ON_CREATE");
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_weather, menu);
+        return true;
+    }
+
 
     @Override
     protected void onStart() {
@@ -115,4 +126,5 @@ public class WeatherActivity extends AppCompatActivity {
                 Toast.makeText(this, "Permission denied to write to external storage", Toast.LENGTH_SHORT).show();
             }
         }
-}}
+    }
+}
