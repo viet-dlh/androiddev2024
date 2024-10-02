@@ -72,7 +72,7 @@ public class WeatherActivity extends AppCompatActivity {
         OutputStream outputStream = null;
 
         try {
-            inputStream = getResources().openRawResource(R.raw.m);
+            inputStream = getResources().openRawResource(R.raw.music);
             File musicFile = new File(getExternalFilesDir(Environment.DIRECTORY_MUSIC), "m.mp3");
             
             byte[] buffer = new byte[1024];
