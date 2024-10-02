@@ -1,12 +1,17 @@
 package vn.edu.usth.weather;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
+import android.os.Handler;
+import android.os.Looper;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,12 +31,14 @@ public class WeatherActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_WRITE_EXTERNAL_STORAGE = 1;
     private ViewPager2 viewpager2;
     private TabLayout tabLayout;
+    private Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        handler = new Handler(Looper.getMainLooper());
         getSupportActionBar().setTitle("Weather App");
         viewpager2 = findViewById(R.id.vp1);
         tabLayout = findViewById(R.id.tabLayout);
@@ -52,79 +59,57 @@ public class WeatherActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_refresh) {
+            simulateNetworkRequest();
+            return true;
+        } else if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, PrefActivity.class);
+            startActivity(intent);
+            return true;
+    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(TAG, "ON_START");
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "ON_RESUME");
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "ON_PAUSE");
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "ON_STOP");
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "ON_DESTROY");
-    }
-    private void extractAndPlayMusic() {
-        InputStream inputStream = null;
-        OutputStream outputStream = null;
-
-        try {
-            inputStream = getResources().openRawResource(R.raw.music);
-            File musicFile = new File(getExternalFilesDir(Environment.DIRECTORY_MUSIC), "m.mp3");
-            
-            byte[] buffer = new byte[1024];
-            int length;
-
-            while ((length = inputStream.read(buffer)) > 0) {
-                outputStream.write(buffer, 0, length);
+    private void simulateNetworkRequest() {
+        Toast.makeText(this,"Refreshing...",Toast.LENGTH_SHORT).show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(2000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                Handler handler = null;
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(WeatherActivity.this,"Refresh complete!!!",Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
-
-            outputStream.flush();
-
-            // Play the music file
-            MediaPlayer mediaPlayer = new MediaPlayer();
-            mediaPlayer.setDataSource(musicFile.getPath());
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-            Toast.makeText(this, "Music is playing", Toast.LENGTH_SHORT).show();
-
-        } catch (IOException e) {
-            Log.e(TAG, "Error playing music: " + e.getMessage());
-            Toast.makeText(this, "Error playing music", Toast.LENGTH_SHORT).show();
-        } finally {
-            // Close streams safely
-            try {
-                if (inputStream != null) inputStream.close();
-                if (outputStream != null) outputStream.close();
-            } catch (IOException e) {
-                Log.e(TAG, "Error closing streams: " + e.getMessage());
-            }
-        }
+        }).start();
+    }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_WRITE_EXTERNAL_STORAGE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                extractAndPlayMusic();
-            } else {
-                Toast.makeText(this, "Permission denied to write to external storage", Toast.LENGTH_SHORT).show();
+    private void simulateNetworkRequest() {
+        Toast.makeText(this,"Refreshing...",Toast.LENGTH_SHORT).show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(2000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(WeatherActivity.this,"Refresh complete!!!",Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
-        }
+        }).start();
     }
-}
+    }
